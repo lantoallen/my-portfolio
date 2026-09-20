@@ -1,3 +1,13 @@
+# macOS
 .DS_Store
+Thumbs.db
 
+# Editors
+.idea/
+.vscode/
+
+# Secrets and dependencies
+.env
+.env.*
 node_modules/
+*.log
