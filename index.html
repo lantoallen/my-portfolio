@@ -6,37 +6,131 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: #0f172a; color: #f8fafc; font-family: sans-serif; margin: 0;">
-    
-    <nav style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem;">
-        <h1 style="font-weight: bold; margin: 0; color: #ec4899;">My Portfolio</h1>
-        <ul style="display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0;">
-            <li><a href="#about" style="color: #f8fafc; text-decoration: none;">About</a></li>
-            <li><a href="#projects" style="color: #f8fafc; text-decoration: none;">Projects</a></li>
-            <li><a href="#contact" style="color: #f8fafc; text-decoration: none;">Contact</a></li>
-        </ul>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="logo">lantoallen</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#journey">Journey</a>
+        </div>
     </nav>
 
-    <section id="hero" style="min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
-        <p style="color: #ec4899; margin-bottom: 0.5rem;">Hi, my name is Allen</p>
-        <h1 style="font-size: 3rem; margin: 0; color: white;">CS Student & UX Designer</h1>
-        <p style="color: #cbd5e1; max-width: 600px; margin: 1.5rem 0;">Passionate about bridging beautiful interfaces with robust code. Experienced in designing mobile apps and responsive websites.</p>
-        <a href="#projects" style="background-color: #ec4899; color: white; padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: bold;">View My Work</a>
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <p class="greeting">Hi, I’m Allen!</p>
+        <h1 class="hero-title">Building, Learning, and Creating with Code.</h1>
+        <p class="hero-desc">I’m a 2nd-year Computer Science student at De La Salle Lipa, currently exploring software and web development through projects, workshops, and hands-on learning.</p>
+        <a href="#journey" class="btn">Explore My Work ↓</a>
+    </header>
+
+    <!-- ABOUT & QUICK FACTS -->
+    <section id="about" class="container">
+        <h2 class="section-title"><span class="accent">01 //</span> A Developer in Progress</h2>
+        <div class="about-grid">
+            <div class="bio-card">
+                <p>I'm an 18-year-old Computer Science student at De La Salle Lipa. I treat every project as a checkpoint—not a finished product. I enjoy turning ideas into functional applications and experimenting with different technologies.</p>
+            </div>
+            <div class="facts-card">
+                <div class="fact"><span>AGE</span> 18 years old</div>
+                <div class="fact"><span>YEAR</span> 2nd Year Computer Science</div>
+                <div class="fact"><span>SCHOOL</span> De La Salle Lipa</div>
+            </div>
+        </div>
     </section>
 
-    <section id="projects" style="padding: 4rem 2rem;">
-        <h2 style="color: #ec4899; text-align: center; margin: 0 0 2rem;">Featured Projects</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
-            <article style="background-color: #1e293b; border-radius: 10px; padding: 2rem;">
-                <h3 style="color: white; margin-top: 0;">Fictional Business - UX Design & Web Development</h3>
-                <p style="color: #cbd5e1; line-height: 1.6;">An end-to-end design and development project for a fictional business, highlighting a seamless user experience and modern UI.</p>
-                <p style="color: #cbd5e1;"><strong>Tech Stack:</strong> Figma, HTML, CSS, JavaScript</p>
-                <button type="button" style="background-color: #ec4899; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 5px; cursor: pointer; font-weight: bold; margin-top: 1rem;">View Case Study</button>
-            </article>
+    <!-- THE TOOLBOX -->
+    <section id="skills" class="container">
+        <h2 class="section-title"><span class="accent">02 //</span> The Toolbox</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Programming</h3>
+                <p>Java, Python, JavaScript</p>
+            </div>
+            <div class="skill-category">
+                <h3>Web & Design</h3>
+                <p>HTML, CSS, Figma</p>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Backend</h3>
+                <p>VS Code, IntelliJ IDEA, Git, GitHub, Supabase</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="container">
+        <h2 class="section-title"><span class="accent">03 //</span> Things I've Built</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>GitHub Repositories</h3>
+                <p>A collection of my coursework, experiments, and personal projects exploring Java, Python, and Web Development.</p>
+                <a href="https://github.com/lantoallen" target="_blank" class="project-link">View on GitHub ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MY JOURNEY -->
+    <section id="journey" class="container">
+        <h2 class="section-title"><span class="accent">04 //</span> My Journey</h2>
+        <p class="subtitle">From learning my first lines of code to building my path toward full-stack development.</p>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>🌱 Starting From Zero</h3>
+                <p>When I first entered BS Computer Science at De La Salle Lipa, I didn't know much about programming or software development. I started with curiosity, a willingness to learn, and a lot of things I had yet to discover. That curiosity became the beginning of my journey.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>☕ My First Programming Language: Java</h3>
+                <p>Java was the first programming language I learned. It introduced me to programming fundamentals, problem-solving, classes and objects, and the foundations of object-oriented programming. I'm still learning and improving my Java skills today, but learning it gave me the foundation to explore beyond my first language.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>🧠 Building My Foundations</h3>
+                <p>As I continued my Computer Science studies through Object-Oriented Programming and Data Structures and Algorithms, I started learning how to think beyond basic syntax—structuring programs, organizing data, and solving problems more effectively.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>🐍 Exploring Python</h3>
+                <p>My journey expanded when I started learning Python through my Introduction to Data Science course. Learning a second programming language gave me a new perspective and encouraged me to become more comfortable with unfamiliar technologies.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>🎨 Understanding the User</h3>
+                <p>Through Human-Computer Interaction (HCI), I discovered another side of building software: understanding the people who use it. Exploring UI/UX design and Figma taught me that good software isn't only about making something work—it's also about making it intuitive and enjoyable to use.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>🌐 Stepping Into Web Development</h3>
+                <p>As I became more curious about the web, I explored HTML, CSS, and JavaScript. This was where programming started to feel more tangible, seeing how code, design, and interaction come together to create an actual website or application.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>🗄️ Exploring the Backend</h3>
+                <p>I started looking beyond what users see on the screen. Exploring databases, APIs, and working with Supabase during a workshop gave me a glimpse into how applications connect to data and how systems behind an interface work.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>🤖 Learning Beyond the Classroom</h3>
+                <p>My learning doesn't stop with university subjects. Through online courses, AI workshops, and conversations with seniors, fellow students, and tech professionals, I've gained valuable industry insights and kept my curiosity alive.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>🔨 Learning by Building</h3>
+                <p>I'm now focusing more on building projects and applying what I learn. For me, the goal is no longer just <em>"What do I know?"</em> but rather <em>"What can I build with what I know?"</em></p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>🚀 Where I Am Now & Where I'm Headed</h3>
+                <p>Right now, I'm developing skills across Java, Python, Web Tech, UI/UX, Databases, Git, and AI. My goal is to become a Full-Stack Developer who understands both the frontend and backend while keeping the user experience in mind. I'm not there yet—and that's okay. This is only the beginning.</p>
+            </div>
         </div>
     </section>
 
     <script src="script.js"></script>
 </body>
 </html>
-<h1>Test</h1> 
