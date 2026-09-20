@@ -6,11 +6,37 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: #0f172a; color: #f8fafc; font-family: sans-serif;">
+<body style="background-color: #0f172a; color: #f8fafc; font-family: sans-serif; margin: 0;">
     
-    <!-- We will build the navigation and hero section here next -->
-    <h1 style="color: #ec4899; text-align: center; margin-top: 20vh;">Portfolio Initialized</h1>
+    <nav style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem;">
+        <h1 style="font-weight: bold; margin: 0; color: #ec4899;">My Portfolio</h1>
+        <ul style="display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0;">
+            <li><a href="#about" style="color: #f8fafc; text-decoration: none;">About</a></li>
+            <li><a href="#projects" style="color: #f8fafc; text-decoration: none;">Projects</a></li>
+            <li><a href="#contact" style="color: #f8fafc; text-decoration: none;">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero" style="min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+        <p style="color: #ec4899; margin-bottom: 0.5rem;">Hi, my name is Allen</p>
+        <h1 style="font-size: 3rem; margin: 0; color: white;">CS Student & UX Designer</h1>
+        <p style="color: #cbd5e1; max-width: 600px; margin: 1.5rem 0;">Passionate about bridging beautiful interfaces with robust code. Experienced in designing mobile apps and responsive websites.</p>
+        <a href="#projects" style="background-color: #ec4899; color: white; padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: bold;">View My Work</a>
+    </section>
+
+    <section id="projects" style="padding: 4rem 2rem;">
+        <h2 style="color: #ec4899; text-align: center; margin: 0 0 2rem;">Featured Projects</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+            <article style="background-color: #1e293b; border-radius: 10px; padding: 2rem;">
+                <h3 style="color: white; margin-top: 0;">Fictional Business - UX Design & Web Development</h3>
+                <p style="color: #cbd5e1; line-height: 1.6;">An end-to-end design and development project for a fictional business, highlighting a seamless user experience and modern UI.</p>
+                <p style="color: #cbd5e1;"><strong>Tech Stack:</strong> Figma, HTML, CSS, JavaScript</p>
+                <button type="button" style="background-color: #ec4899; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 5px; cursor: pointer; font-weight: bold; margin-top: 1rem;">View Case Study</button>
+            </article>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
 </html>
+<h1>Test</h1> 
