@@ -206,3 +206,63 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent-pink); out
     font-size: 0.85rem;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
+
+/* ---- Visual polish ---- */
+.hero { position: relative; overflow: hidden; isolation: isolate; }
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.25) 0%, transparent 70%);
+    filter: blur(40px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #ec4899, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.badge {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    border: 1px solid rgba(236, 72, 153, 0.4);
+    background: rgba(236, 72, 153, 0.08);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+}
+.badge::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 8px #22c55e;
+    margin-right: 8px;
+}
+
+.skill-category:hover, .project-card:hover {
+    box-shadow: 0 10px 30px rgba(236, 72, 153, 0.15);
+}
+
+/* Scroll fade-in (classes are added by script.js) */
+.reveal { opacity: 0; }
+.reveal.visible { opacity: 1; animation: fadeUp 0.6s ease backwards; }
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; }
+    .reveal.visible { animation: none; }
+}
