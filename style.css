@@ -180,3 +180,20 @@ body {
     display: inline-block;
     margin-top: 15px;
 }
+
+/* ---- Fixes: layout, contrast, focus ---- */
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+.hero { min-height: 80vh; height: auto; padding: 60px 20px; }
+.hero-title { font-size: clamp(2rem, 6vw, 3.5rem); }
+.btn { color: #0b0b0b; }
+a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent-pink); outline-offset: 3px; }
+
+@media (max-width: 640px) {
+  .navbar { padding: 14px 20px; }
+  .nav-links a { margin-left: 14px; }
+  .container { padding: 60px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
