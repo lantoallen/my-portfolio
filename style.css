@@ -7,7 +7,7 @@
 }
 
 body {
-    background: radial-gradient(circle at top left, #300116 0%, #000000 60%);
+    background: radial-gradient(circle at top left, #300116 0%, #000000 25%);
     background-color: var(--bg-dark);
     color: var(--text-light);
     margin: 0;
@@ -435,3 +435,112 @@ body::before {
 .service-card h3 { margin: 0 0 10px; color: var(--text-light); }
 .service-card p { margin: 0; color: var(--text-muted); line-height: 1.6; }
 .services-cta { text-align: center; margin-top: 40px; }
+
+/* ---- Subtle depth ---- */
+
+/* Ambient color that stays fixed while you scroll */
+body {
+    background:
+        radial-gradient(circle at top left, #300116 0%, transparent 55%),
+        radial-gradient(ellipse at bottom right, rgba(168, 85, 247, 0.14) 0%, transparent 55%),
+        #000;
+    background-attachment: fixed;
+}
+
+/* Fading divider line between sections */
+.container ~ .container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(236, 72, 153, 0.35), transparent);
+}
+.container { position: relative; }
+
+/* Faint top highlight on cards */
+.bio-card, .facts-card, .skill-category, .project-card, .contact-card, .service-card {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.skill-category:hover, .project-card:hover, .contact-card:hover, .service-card:hover {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 30px rgba(236, 72, 153, 0.15);
+}
+
+/* Scroll progress bar (created by script.js) */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(90deg, #ec4899, #a855f7);
+    z-index: 200;
+    pointer-events: none;
+}
+
+/* Small polish */
+::selection { background: rgba(236, 72, 153, 0.35); color: #fff; }
+html { scrollbar-color: #4a1230 #000; }
+
+/* ---- Purple + pink theme ---- */
+:root {
+    --accent-purple: #a855f7;
+    --gradient: linear-gradient(135deg, #ec4899, #a855f7);
+}
+
+/* Background: soft glows on a near-black base (replaces the earlier body background) */
+body {
+    background:
+        radial-gradient(circle at top left, rgba(236, 72, 153, 0.16) 0%, transparent 50%),
+        radial-gradient(ellipse at top right, rgba(168, 85, 247, 0.10) 0%, transparent 45%),
+        radial-gradient(ellipse at bottom right, rgba(168, 85, 247, 0.14) 0%, transparent 55%),
+        #05020a;
+    background-attachment: fixed;
+}
+
+/* Hero glow: pink and purple side by side */
+.hero::before {
+    width: 720px;
+    background:
+        radial-gradient(circle at 35% 50%, rgba(236, 72, 153, 0.22) 0%, transparent 60%),
+        radial-gradient(circle at 65% 50%, rgba(168, 85, 247, 0.20) 0%, transparent 60%);
+}
+
+/* Gradient logo, buttons, nav underline */
+.logo {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.btn { background: var(--gradient); color: #0b0b0b; }
+.btn:hover { box-shadow: 0 4px 20px rgba(168, 85, 247, 0.35); }
+.nav-links a::after { background: var(--gradient); }
+
+/* Alternate purple accents so it doesn't feel like one color */
+.timeline { border-image: linear-gradient(to bottom, #ec4899, #a855f7 60%, rgba(255, 255, 255, 0.05)) 1; }
+.timeline-item:nth-child(even)::before {
+    background-color: var(--accent-purple);
+    box-shadow: 0 0 10px var(--accent-purple);
+}
+.tags li:nth-child(even) {
+    color: #c084fc;
+    background: rgba(168, 85, 247, 0.1);
+    border-color: rgba(168, 85, 247, 0.25);
+}
+.skill-category:nth-child(even):hover,
+.service-card:nth-child(even):hover,
+.contact-card:nth-child(even):hover {
+    border-color: var(--accent-purple);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 30px rgba(168, 85, 247, 0.18);
+}
+.service-card:nth-child(even) .service-icon,
+.contact-card:nth-child(even) .contact-icon { stroke: var(--accent-purple); }
+
+/* Footer gradient line + scrollbar */
+.footer {
+    border-top: 1px solid;
+    border-image: linear-gradient(90deg, transparent, #a855f7, #ec4899, transparent) 1;
+}
+html { scrollbar-color: #3d1547 #000; }
