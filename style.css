@@ -544,3 +544,13 @@ body {
     border-image: linear-gradient(90deg, transparent, #a855f7, #ec4899, transparent) 1;
 }
 html { scrollbar-color: #3d1547 #000; }
+
+/* ---- Hero buttons ---- */
+.hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.btn.btn-ghost {
+    background: transparent;
+    color: var(--text-light);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 11px 27px;
+}
+.btn.btn-ghost:hover { border-color: var(--accent-pink); color: var(--accent-pink); box-shadow: none; }
