@@ -1,6 +1,6 @@
 // Fade in sections as they scroll into view
 const items = document.querySelectorAll(
-    '.section-title, .bio-card, .facts-card, .skill-category, .project-card, .timeline-item, .contact-card'
+    '.section-title, .bio-card, .facts-card, .skill-category, .project-card, .timeline-item, .contact-card, .service-card'
 );
 
 if ('IntersectionObserver' in window) {
