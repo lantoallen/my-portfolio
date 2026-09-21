@@ -36,3 +36,13 @@ if ('IntersectionObserver' in window) {
 
     sections.forEach((section) => navObserver.observe(section));
 }
+
+// Scroll progress bar
+const progressBar = document.createElement('div');
+progressBar.className = 'scroll-progress';
+document.body.appendChild(progressBar);
+
+window.addEventListener('scroll', () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+}, { passive: true });
