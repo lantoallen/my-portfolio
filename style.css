@@ -609,3 +609,32 @@ html { scrollbar-color: #3d1547 #000; }
     .timeline-item { margin-left: 34px; padding: 20px; }
     .timeline-item::before { left: -29px; }
 }
+
+/* ---- Projects ---- */
+.projects-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+.project-card { display: flex; flex-direction: column; padding: 0; overflow: hidden; }
+.project-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.project-body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
+.project-body h3 { margin: 0 0 8px; }
+.project-body p { margin: 0 0 16px; flex: 1; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; padding: 0; list-style: none; }
+.tags li {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--accent-pink);
+    background: rgba(236, 72, 153, 0.1);
+    border: 1px solid rgba(236, 72, 153, 0.25);
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.project-links { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-sm { padding: 8px 18px; font-size: 0.85rem; }
+.more-projects { margin-top: 30px; text-align: center; }
