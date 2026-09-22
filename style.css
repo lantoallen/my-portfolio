@@ -638,3 +638,5 @@ html { scrollbar-color: #3d1547 #000; }
 .project-links { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn-sm { padding: 8px 18px; font-size: 0.85rem; }
 .more-projects { margin-top: 30px; text-align: center; }
+
+.logo-bracket { color: var(--accent-pink); font-weight: 400; }
